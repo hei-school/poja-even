@@ -2,13 +2,12 @@ package ac.lou.poja.endpoint.rest.controller;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
 
-import ac.lou.poja.conf.FacadeIT;
 import java.util.ArrayList;
-import org.junit.jupiter.api.Test;
-import org.springframework.beans.factory.annotation.Autowired;
 
-public class EvenControllerIT extends FacadeIT {
-  @Autowired EvenController evenController;
+import org.junit.jupiter.api.Test;
+
+public class EvenControllerIT {
+  EvenController evenController = new EvenController();
 
   @Test
   void isEven() {
