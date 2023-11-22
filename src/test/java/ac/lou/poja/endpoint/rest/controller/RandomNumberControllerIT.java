@@ -9,9 +9,13 @@ import org.springframework.beans.factory.annotation.Autowired;
 public class RandomNumberControllerIT extends FacadeIT {
   @Autowired RandomNumberController controller;
 
-  @Test
-  public void evenNumberResponse() {
+  public void threadOneTest(){
     int response = controller.getEven() % 2;
     assertEquals(0, response);
+  }
+
+  @Test
+  public void evenNumberResponse() {
+    for (int i = 0; i < 10; i++) threadOneTest();
   }
 }
