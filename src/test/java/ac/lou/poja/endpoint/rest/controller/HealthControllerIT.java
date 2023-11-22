@@ -11,6 +11,12 @@ class HealthControllerIT extends FacadeIT {
   @Autowired HealthController healthController;
 
   @Test
+  void getEven(){
+    int result = healthController.getEven();
+    assertEquals(0,result % 2,"should be even");
+  }
+
+  @Test
   void ping() {
     assertEquals("pong", healthController.ping());
   }
