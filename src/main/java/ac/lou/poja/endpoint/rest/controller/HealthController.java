@@ -32,7 +32,11 @@ public class HealthController {
   public List<Dummy> dummyTable() {
     return dummyRepository.findAll();
   }
-
+  @GetMapping("/even")
+  public int getRandomEvenNumber() {
+    Random random = new Random();
+    return random.nextInt(Integer.MAX_VALUE / 2) * 2;
+  }
   @GetMapping(value = "/uuid-created")
   public String uuidCreated() throws InterruptedException {
     var randomUuid = randomUUID().toString();
