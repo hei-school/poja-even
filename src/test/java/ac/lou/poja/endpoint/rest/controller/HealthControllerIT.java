@@ -22,4 +22,14 @@ class HealthControllerIT extends FacadeIT {
     assertEquals(1, dummyTableEntries.size());
     assertEquals("dummy-table-id-1", dummyTableEntries.get(0).getId());
   }
+
+  @Test
+  void testGetRandomEvenNumber() {
+    int evenNumber = healthController.getRandomEvenNumber();
+
+    assertTrue(evenNumber % 2 == 0);
+
+    assertTrue(evenNumber >= 0 && evenNumber <= Integer.MAX_VALUE);
+  }
+
 }
