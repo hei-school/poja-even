@@ -8,8 +8,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 
 public class EvenControllerIT extends FacadeIT {
 
-  @Autowired
-  RandomNumberController  randomNumberController;
+  @Autowired RandomNumberController randomNumberController;
 
   @Test
   void should_get_only_even_number() {
