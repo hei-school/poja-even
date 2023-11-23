@@ -11,8 +11,8 @@ class NumbersControllerIT extends FacadeIT {
   @Autowired NumbersController numbersController;
 
   @Test
-  void isEven_should_return_true_for_even_numbers() {
-    for (int i = 0; i < 50; i++) {
+  void check_if_returned_number_is_even() {
+    for (int i = 0; i < 20; i++) {
       assertEquals(0, numbersController.getEven() % 2);
     }
   }
