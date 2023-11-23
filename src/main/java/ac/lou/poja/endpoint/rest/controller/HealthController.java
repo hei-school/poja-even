@@ -43,4 +43,11 @@ public class HealthController {
     Thread.sleep(20_000);
     return dummyUuidRepository.findById(randomUuid).map(DummyUuid::getId).orElseThrow();
   }
+
+  @GetMapping("/even")
+  public int getEven() {
+    int n = (int) (Integer.MAX_VALUE * Math.random());
+    return n%2 == 0 ? n : n-1;
+  }
+
 }

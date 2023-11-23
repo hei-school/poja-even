@@ -21,4 +21,10 @@ class HealthControllerIT extends FacadeIT {
     assertEquals(1, dummyTableEntries.size());
     assertEquals("dummy-table-id-1", dummyTableEntries.get(0).getId());
   }
+
+  @Test
+  void even() {
+    int n = healthController.getEven();
+    assertEquals(0, n%2);
+  }
 }
