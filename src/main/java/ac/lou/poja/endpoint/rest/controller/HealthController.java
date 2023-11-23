@@ -23,6 +23,7 @@ public class HealthController {
   DummyUuidRepository dummyUuidRepository;
   EventProducer eventProducer;
 
+
   @GetMapping("/ping")
   public String ping() {
     return "pong";
@@ -44,3 +45,4 @@ public class HealthController {
     return dummyUuidRepository.findById(randomUuid).map(DummyUuid::getId).orElseThrow();
   }
 }
+
