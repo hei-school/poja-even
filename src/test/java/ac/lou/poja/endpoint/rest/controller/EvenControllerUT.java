@@ -4,12 +4,9 @@ import static org.junit.jupiter.api.Assertions.assertEquals;
 
 import java.util.ArrayList;
 import org.junit.jupiter.api.Test;
-import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.boot.test.context.SpringBootTest;
 
-@SpringBootTest
-public class EvenControllerIT {
-  @Autowired EvenController evenController;
+public class EvenControllerUT {
+  EvenController evenController = new EvenController();
 
   @Test
   void isEven() {
