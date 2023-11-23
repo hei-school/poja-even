@@ -10,6 +10,8 @@ import ac.lou.poja.repository.DummyUuidRepository;
 import ac.lou.poja.repository.model.Dummy;
 import ac.lou.poja.repository.model.DummyUuid;
 import java.util.List;
+import java.util.Random;
+
 import lombok.Value;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RestController;
