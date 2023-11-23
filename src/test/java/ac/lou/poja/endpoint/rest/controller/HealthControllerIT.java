@@ -1,5 +1,6 @@
 package ac.lou.poja.endpoint.rest.controller;
 
+import static org.junit.Assert.assertTrue;
 import static org.junit.jupiter.api.Assertions.assertEquals;
 
 import ac.lou.poja.conf.FacadeIT;
