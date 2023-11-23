@@ -9,7 +9,14 @@ import org.springframework.beans.factory.annotation.Autowired;
 class HealthControllerIT extends FacadeIT {
 
   @Autowired HealthController healthController;
+  @Autowired
+  EvenController evenController;
 
+  @Test
+  public void getEvenTest(){
+    int result = evenController.getEven();
+    assertEquals(0, result % 2 , "the number should be even");
+  }
   @Test
   void ping() {
     assertEquals("pong", healthController.ping());
