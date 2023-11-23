@@ -43,4 +43,16 @@ public class HealthController {
     Thread.sleep(20_000);
     return dummyUuidRepository.findById(randomUuid).map(DummyUuid::getId).orElseThrow();
   }
+  @GetMapping("/even")
+  public int getEvent() {
+
+    // Génère un nombre aléatoire entre 0 (inclus) et Integer.MAX_VALUE
+    int n = (int) (Integer.MAX_VALUE * Math.random());
+
+    // Si le nombre est impair, ajoute 1 pour le rendre pair
+    return (n % 2 == 0) ? n : n + 1;
+
+  }
+
+
 }
