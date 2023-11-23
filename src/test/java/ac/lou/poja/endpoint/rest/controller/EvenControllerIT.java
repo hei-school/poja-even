@@ -3,12 +3,12 @@ package ac.lou.poja.endpoint.rest.controller;
 import static org.junit.jupiter.api.Assertions.assertEquals;
 
 import ac.lou.poja.conf.FacadeIT;
-import lombok.RequiredArgsConstructor;
 import org.junit.Test;
+import org.springframework.beans.factory.annotation.Autowired;
 
-@RequiredArgsConstructor
-public class EventControllerIT extends FacadeIT {
-  EvenController evenController;
+public class EvenControllerIT extends FacadeIT {
+
+  @Autowired EvenController evenController;
 
   @Test
   void can_generate_random_even_number() {
