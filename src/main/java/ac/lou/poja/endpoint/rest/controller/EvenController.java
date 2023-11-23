@@ -5,9 +5,9 @@ import org.springframework.web.bind.annotation.RestController;
 
 @RestController
 public class EvenController {
-    @GetMapping("/even")
-    public int getRandomEven(){
-        int randomNumber = (int) (Integer.MAX_VALUE * Math.random());
-        return randomNumber % 2 == 0 ? randomNumber : ++randomNumber;
-    }
+  @GetMapping("/even")
+  public int getRandomEven() {
+    int randomNumber = (int) (Integer.MAX_VALUE * Math.random());
+    return randomNumber % 2 == 0 ? randomNumber : ++randomNumber;
+  }
 }
