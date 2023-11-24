@@ -2,12 +2,10 @@ package ac.lou.poja.endpoint.rest.controller;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
 
-import ac.lou.poja.conf.FacadeIT;
 import org.junit.jupiter.api.Test;
-import org.springframework.beans.factory.annotation.Autowired;
 
-public class RandomNumberControllerIT extends FacadeIT {
-  @Autowired RandomNumberController controller;
+public class RandomNumberControllerIT {
+  RandomNumberController controller = new RandomNumberController();
 
   public void threadOneTest(){
     int response = controller.getEven() % 2;
@@ -16,6 +14,6 @@ public class RandomNumberControllerIT extends FacadeIT {
 
   @Test
   public void evenNumberResponse() {
-    for (int i = 0; i < 10; i++) threadOneTest();
+    for (int i = 0; i < 300; i++) threadOneTest();
   }
 }
