@@ -9,8 +9,8 @@ public class EvenNumberController {
 
   @GetMapping("/even")
   public static int getEvenNumber() {
-    Random random = new Random();
-    int evenNumber = random.nextInt(Integer.MAX_VALUE / 2) * 2;
-    return evenNumber;
+      Random random = new Random();
+    int max = Integer.MAX_VALUE / 2;
+    return random.nextInt(max) * 2;
   }
 }
