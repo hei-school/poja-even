@@ -16,6 +16,7 @@ class EventConsumerIT extends FacadeIT {
 
   @Autowired EventConsumer subject;
   @Autowired DummyUuidRepository dummyUuidRepository;
+  @Autowired HealthController healthController;
 
   @Test
   void uuid_created_is_persisted() throws InterruptedException, JsonProcessingException {
@@ -35,4 +36,11 @@ class EventConsumerIT extends FacadeIT {
     var saved = dummyUuidRepository.findById(uuid).orElseThrow();
     assertEquals(uuid, saved.getId());
   }
+
+  @Test
+  void generate_odd_number_is_odd() {
+    int oddNumber = healthController.generateOddNumber();
+    assertTrue(oddNumber % 2 != 0, "Generated number should be odd");
+  }
+
 }

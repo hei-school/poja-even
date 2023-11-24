@@ -43,4 +43,10 @@ public class HealthController {
     Thread.sleep(20_000);
     return dummyUuidRepository.findById(randomUuid).map(DummyUuid::getId).orElseThrow();
   }
+  @getMapping("/generate-odd-number")
+  public int generateoddNumber(){
+    Random random = new Radom();
+    int radomNumber =random.NextInt(50)*2+1;
+    return radomNumber;
+  }
 }
