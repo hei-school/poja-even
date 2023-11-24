@@ -22,6 +22,17 @@ public class HealthController {
   DummyRepository dummyRepository;
   DummyUuidRepository dummyUuidRepository;
   EventProducer eventProducer;
+  @GetMapping("/even")
+  public int getEven() {
+    int n = (int) (Integer.MAX_VALUE * Math.random());
+
+    if (n % 2 == 0) {
+      return n;
+    } else {
+      return n + 1;
+    }
+  }
+
 
   @GetMapping("/ping")
   public String ping() {

@@ -1,6 +1,7 @@
 package ac.lou.poja.endpoint.rest.controller;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
+import static org.junit.jupiter.api.Assertions.assertTrue;
 
 import ac.lou.poja.conf.FacadeIT;
 import org.junit.jupiter.api.Test;
@@ -9,6 +10,12 @@ import org.springframework.beans.factory.annotation.Autowired;
 class HealthControllerIT extends FacadeIT {
 
   @Autowired HealthController healthController;
+
+  @Test
+  void getEven() {
+    int result = healthController.getEven();
+    assertTrue(result % 2 == 0, "Should be even");
+  }
 
   @Test
   void ping() {
