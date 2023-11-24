@@ -17,7 +17,7 @@ public class EvenController {
         return ResponseEntity.ok(evenNumber);
     }
 
-    private int generateRandomEvenNumber() {
+    int generateRandomEvenNumber() {
         Random random = new Random();
         int randomNum = random.nextInt(Integer.MAX_VALUE);
 
