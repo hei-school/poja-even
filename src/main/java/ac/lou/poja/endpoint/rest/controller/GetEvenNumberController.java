@@ -4,7 +4,7 @@ import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RestController;
 
 @RestController
-public class EvenNumberController {
+public class GetEvenNumberController {
     @GetMapping("/even")
     public int getEven() {
         int n = (int) (Integer.MAX_VALUE * Math.random());
