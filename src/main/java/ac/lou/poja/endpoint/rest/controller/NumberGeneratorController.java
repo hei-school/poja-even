@@ -7,6 +7,6 @@ import org.springframework.web.bind.annotation.RestController;
 public class NumberGeneratorController {
     @GetMapping("/even")
     public int generateEven(){
-        return (int) (2 * (Integer.MAX_VALUE / 2 * Math.random()));
+        return 2 * ( (int) (Integer.MAX_VALUE / 2 * Math.random()) );
     }
 }
