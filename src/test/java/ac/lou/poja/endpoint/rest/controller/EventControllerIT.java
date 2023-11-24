@@ -6,7 +6,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 
 import static org.junit.jupiter.api.Assertions.assertTrue;
 
-class EventControllerT extends FacadeIT {
+class EventControllerIT extends FacadeIT {
 
     @Autowired EvenController evenController;
 
