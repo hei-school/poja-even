@@ -1,9 +1,8 @@
 package ac.lou.poja.endpoint.rest.controller;
 
+import java.util.Random;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RestController;
-
-import java.util.Random;
 
 @RestController
 public class RandomNumberController {
