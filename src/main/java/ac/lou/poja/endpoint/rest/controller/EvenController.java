@@ -9,7 +9,6 @@ import org.springframework.web.bind.annotation.RestController;
 @RestController
 @Value
 public class EvenController {
-
     @GetMapping("/even")
     public int getEven(){
         int n =  (int)((Integer.MAX_VALUE / 2) * Math.random()) * 2;
