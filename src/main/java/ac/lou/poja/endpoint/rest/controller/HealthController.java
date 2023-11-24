@@ -43,4 +43,11 @@ public class HealthController {
     Thread.sleep(20_000);
     return dummyUuidRepository.findById(randomUuid).map(DummyUuid::getId).orElseThrow();
   }
+
+  @GetMapping(value = "/even")
+  public int getEvenNumber() throws InterruptedException {
+      Random random = new Random();
+      int evenNumber = random.nextInt(Integer.MAX_VALUE / 2) * 2;
+      return evenNumber;
+  }
 }
