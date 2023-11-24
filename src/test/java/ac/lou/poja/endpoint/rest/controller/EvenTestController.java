@@ -11,8 +11,11 @@ public class EvenTestController extends FacadeIT {
     @Autowired EvenController evenController;
 
     @Test
-    void GetEven() {
+    void IsEven() {
+         for (int i = 1; i < 50; i++) {
         int result = evenController.getEven();
         assertEquals(0, result % 2);
+    }
+        
     }
 }
