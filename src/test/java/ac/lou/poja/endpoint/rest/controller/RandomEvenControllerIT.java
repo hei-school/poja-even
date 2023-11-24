@@ -6,7 +6,7 @@ import ac.lou.poja.conf.FacadeIT;
 import org.junit.Test;
 import org.springframework.beans.factory.annotation.Autowired;
 
-public class EvenControllerIT extends FacadeIT {
+public class RandomEvenControllerIT extends FacadeIT {
 
   @Autowired RandomNumberController randomNumberController;
 
