@@ -1,6 +1,6 @@
 package ac.lou.poja.endpoint.rest.controller;
 
-import static org.junit.jupiter.api.Assertions.assertEquals;
+import static org.junit.jupiter.api.Assertions.*;
 
 import ac.lou.poja.conf.FacadeIT;
 import org.junit.jupiter.api.Test;
@@ -20,5 +20,12 @@ class HealthControllerIT extends FacadeIT {
     var dummyTableEntries = healthController.dummyTable();
     assertEquals(1, dummyTableEntries.size());
     assertEquals("dummy-table-id-1", dummyTableEntries.get(0).getId());
+  }
+
+  @Test
+  void get_even_number() {
+    int evenNumber = healthController.getEvenNumber().getBody();
+    assertEquals(0, evenNumber % 2);
+    assertTrue(evenNumber >= 0 && evenNumber <= Integer.MAX_VALUE);
   }
 }
