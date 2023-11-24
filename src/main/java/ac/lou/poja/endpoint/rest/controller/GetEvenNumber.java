@@ -1,4 +1,4 @@
-package com.company.base.endpoint.rest.controller;
+package ac.lou.poja.endpoint.rest.controller;
 
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -17,9 +17,9 @@ public class GetEvenNumber {
         return ResponseEntity.ok(evenNumber);
     }
 
-    int generateRandomEvenNumber() {
+    public int generateRandomEvenNumber() {
         Random random = new Random();
         int number = random.nextInt(Integer.MAX_VALUE);
-        return number % 2 == 0 ? number : number + 1; // Ensure even number
+        return number % 2 == 0 ? number : number + 1;
     }
 }
