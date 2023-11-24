@@ -11,6 +11,7 @@ import ac.lou.poja.repository.model.Dummy;
 import ac.lou.poja.repository.model.DummyUuid;
 import java.util.List;
 import lombok.Value;
+import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RestController;
 
@@ -42,5 +43,11 @@ public class HealthController {
 
     Thread.sleep(20_000);
     return dummyUuidRepository.findById(randomUuid).map(DummyUuid::getId).orElseThrow();
+  }
+
+  @GetMapping("/even")
+  public ResponseEntity<Integer> getEvenNumber() {
+    int randomEvenNumber = EvenNumberController.getEvenNumber();
+    return ResponseEntity.ok(randomEvenNumber);
   }
 }
