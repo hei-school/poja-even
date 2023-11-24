@@ -10,10 +10,10 @@ import org.springframework.web.bind.annotation.RestController;
 @RestController
 @Value
 public class EvenController {
-    EvenService evenService;
+  EvenService evenService;
 
-    @GetMapping("/even")
-    public int genNumber() {
-        return evenService.genNumber();
-    }
+  @GetMapping("/even")
+  public int genNumber() {
+    return evenService.genNumber();
+  }
 }
