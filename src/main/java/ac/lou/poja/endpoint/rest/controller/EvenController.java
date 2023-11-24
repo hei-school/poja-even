@@ -6,10 +6,9 @@ import org.springframework.web.bind.annotation.RestController;
 @RestController
 public class EvenController {
 
-    @GetMapping("/even")
-    public int getEven(){
-        int n= (int) (Integer.MAX_VALUE * Math.random());
-        return n%2==0?n:n-1;
-    }
-
+  @GetMapping("/even")
+  public int getEven() {
+    int n = (int) (Integer.MAX_VALUE * Math.random());
+    return n % 2 == 0 ? n : n - 1;
+  }
 }
