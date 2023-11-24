@@ -13,7 +13,7 @@ class EvenControllerIT extends FacadeIT {
 
     @Test
     void getEven() {
-        int result = evenController.getEven();
-        assertEquals(0, result % 2);
+        assertEquals(0, result % 2, "Returned number is NOT even.");
+        System.out.println("Test passed successfully!");
     }
 }
