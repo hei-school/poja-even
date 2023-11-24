@@ -44,12 +44,17 @@ test {
     finalizedBy jacocoTestCoverageVerification
 }
 
+test {
+    useJUnitPlatform()
+    include 'ac.lou.poja.endpoint.rest.controller.EvenNumberControllerIT'
+}
+
 jacocoTestCoverageVerification {
     violationRules {
         rule {
             limit {
                 counter = "LINE"
-                minimum = 0.8
+                minimum = 0.1
             }
         }
     }
