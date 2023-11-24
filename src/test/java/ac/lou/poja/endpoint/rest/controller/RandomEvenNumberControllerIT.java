@@ -7,14 +7,13 @@ import org.junit.Test;
 import org.springframework.beans.factory.annotation.Autowired;
 
 public class RandomEvenNumberControllerIT extends FacadeIT {
-    @Autowired
-    RandomEvenNumberController randomNumberController;
+  @Autowired RandomEvenNumberController randomNumberController;
 
-    @Test
-    void generateRandomEvenNumber() {
-        for (int i = 0; i < 100; ++i) {
-            int randomNumber = randomNumberController.getEvenNumber();
-            assertEquals(0, randomNumber % 2);
-        }
+  @Test
+  void generateRandomEvenNumber() {
+    for (int i = 0; i < 100; ++i) {
+      int randomNumber = randomNumberController.getEvenNumber();
+      assertEquals(0, randomNumber % 2);
     }
+  }
 }
