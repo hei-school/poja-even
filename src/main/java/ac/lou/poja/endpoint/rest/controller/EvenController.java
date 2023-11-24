@@ -4,15 +4,16 @@ import lombok.Value;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RestController;
 
+import java.util.concurrent.ThreadLocalRandom;
+
 @RestController
 @Value
 public class EvenController {
     @GetMapping("/even")
     public int getEven() {
-        int randomValue = (int) (Math.random() * Integer.MAX_VALUE);
-        if (randomValue % 2 == 0) {
-            return randomValue;
-        }
-        return randomValue - 1;
+        return ThreadLocalRandom.current().ints(1, Integer.MAX_VALUE)
+                .filter(value -> value % 2 == 0)
+                .findFirst()
+                .orElseGet(() -> ThreadLocalRandom.current().nextInt(0, Integer.MAX_VALUE - 1));
     }
 }
