@@ -3,12 +3,12 @@ package ac.lou.poja.endpoint.rest.controller;
 import static org.junit.jupiter.api.Assertions.assertEquals;
 
 import java.util.ArrayList;
+
+import ac.lou.poja.conf.FacadeIT;
 import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.boot.test.context.SpringBootTest;
 
-@SpringBootTest
-public class EvenControllerIT {
+public class EvenControllerIT extends FacadeIT {
   @Autowired EvenController evenController;
 
   @Test
