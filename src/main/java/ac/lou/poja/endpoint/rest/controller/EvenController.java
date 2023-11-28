@@ -10,4 +10,5 @@ public class EvenController {
   public int getEven() {
     int randomValue = (int) (Math.random() * Integer.MAX_VALUE);
     return randomValue % 2 == 0 ? randomValue : randomValue - 1;
+  }
 }
